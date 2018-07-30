@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Беларусификатор</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        h1 {
+            padding-left: 100px;
+        }
+    </style>
+    <script>
+        var words = [
+            "кассия",
+            "профессия",
+            "процессия",
+            "комиссия",
+            "россия",
+            "агрессия",
+            "акцессия",
+            "госкомиссия",
+            "декомпрессия",
+            "депрессия",
+            "дискуссия",
+            "компрессия",
+            "конфессия",
+            "концессия",
+            "криптодепрессия",
+            "культкомиссия",
+            "медкомиссия",
+            "мессия",
+            "миссия",
+            "парткомиссия",
+            "пассия",
+            "перекомиссия",
+            "перкуссия",
+            "подкомиссия",
+            "прогрессия",
+            "регрессия",
+            "репрессия",
+            "рецессия",
+            "сессия",
+            "трансгрессия",
+            "трансмиссия",
+            "экспрессия",
+            "эмиссия",
+            "Хакассия",
+            "дигрессия",
+            "ингрессия",
+            "посессия",
+            "прецессия",
+            "сецессия",
+            "сукцессия",
+            "ремиссия",
+            "фотоэмиссия",
+            "Россия",
+            "Белоруссия",
+            "Пруссия",
+            "квассия",
+            "дегрессия",
+            "импрессия"
+        ];
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var intervalFunction = function () {
+                var word = words[Math.floor(Math.random() * words.length)],
+                    bWord = word.substr(0, word.length - 4) + 'сь';
+                document.getElementsByClassName("belorus--text").item(0).innerHTML =
+                    "Не " + word + ", а " + bWord + ' !';
+            };
+            intervalFunction();
+            window.setInterval(intervalFunction, 3000);
+        });
+    </script>
+</head>
+<body>
+<h1 class="belorus--text"></h1>
+<div>
+    <img src="lukashenko.jpg" width="800" height="433" alt="Александр Лукашенко">
+</div>
+
+</body>
+</html>
